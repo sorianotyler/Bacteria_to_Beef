@@ -1,0 +1,54 @@
+//skill drill
+var numbers = [0,2,4,6,8];
+var nums_five = numbers.map(function(fiver){
+    return fiver+5;
+})
+console.log(nums_five)
+
+
+
+
+var cities = [
+    {
+      "Rank": 1,
+      "City": "San Antonio ",
+      "State": "Texas",
+      "Increase_from_2016": "24208",
+      "population": "1511946"
+    },
+    {
+      "Rank": 2,
+      "City": "Phoenix ",
+      "State": "Arizona",
+      "Increase_from_2016": "24036",
+      "population": "1626078"
+    },
+    {
+      "Rank": 3,
+      "City": "Dallas",
+      "State": "Texas",
+      "Increase_from_2016": "18935",
+      "population": "1341075"
+    }
+];
+
+var cityNames = cities.map(function(city){
+    return city.City;
+});
+console.log(cityNames);
+
+
+var cityPop = cities.map(function(city){
+    return city.population;
+});
+console.log(cityPop);
+
+var words = ['seal', 'dog', 'scorpion', 'orangutan', 'salamander'];
+
+var s_words = words.filter(function(word){
+    return word[0] === "s";
+});
+console.log(s_words);
+
+var words = ['seal', 'dog', 'scorpion', 'orangutan', 'salamander'];
+words.slice(3, );
