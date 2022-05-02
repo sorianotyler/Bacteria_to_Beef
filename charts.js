@@ -64,7 +64,7 @@ function buildCharts(sample) {
     
     var curr_sample = resultArray[0];
 
-    console.log(curr_sample);
+    //console.log(curr_sample);
     // 6. Create variables that hold the otu_ids, otu_labels, and sample_values.
     var ids = curr_sample.otu_ids;
     var labels =curr_sample.otu_labels;
@@ -88,7 +88,6 @@ function buildCharts(sample) {
     // 9. Create the layout for the bar chart. 
     var barLayout = {
       title: "Top 10 Bacteria Cultures Found"
-      
     };
     // 10. Use Plotly to plot the data with the layout. 
     Plotly.newPlot("bar", barData, barLayout);
@@ -118,13 +117,12 @@ function buildCharts(sample) {
     var metaArray = metadata_data.filter(metaObj => metaObj.id == sample);
     var curr_meta = metaArray[0];
     var washing_freq = curr_meta.wfreq;
-    console.log(washing_freq);
+    //console.log(washing_freq);
     // 4. Create the trace for the gauge chart.
     var gaugeData = [{
       domain: { x: [0, 1], y: [0, 1] },
       value: washing_freq,
-      title: "Belly Button Washing Frequency",
-      subtitle:"Scrubs Per Week",
+      title: 'Belly Button Washing Frequency <br><sub>Scrubs Per Week</sub>',
       type: "indicator",
       mode: "gauge+numbers",
       //value = washing_freq
